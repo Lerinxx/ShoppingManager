@@ -29,6 +29,11 @@
 			path = ShoppingManager;
 			sourceTree = "<group>";
 		};
+		791B4D022E007A3E002BD2E3 /* Stack */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Stack;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,7 @@
 		791B4CD62E001D62002BD2E3 = {
 			isa = PBXGroup;
 			children = (
+				791B4D022E007A3E002BD2E3 /* Stack */,
 				791B4CE12E001D62002BD2E3 /* ShoppingManager */,
 				791B4CE02E001D62002BD2E3 /* Products */,
 			);
@@ -75,6 +81,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				791B4CE12E001D62002BD2E3 /* ShoppingManager */,
+				791B4D022E007A3E002BD2E3 /* Stack */,
 			);
 			name = ShoppingManager;
 			packageProductDependencies = (
@@ -150,7 +157,6 @@
 				INFOPLIST_FILE = ShoppingManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -183,7 +189,6 @@
 				INFOPLIST_FILE = ShoppingManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;

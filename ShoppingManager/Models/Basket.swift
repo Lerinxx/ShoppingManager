@@ -8,15 +8,21 @@ final class Basket {
     }
     
     func remove(product: String) {
-        guard let count = purchases[product] else { return }
-        if count > 1 {
-            purchases[product] = count - 1
-        } else {
+        guard let count = find(product) else { return }
+        
+        let amount = count - 1
+        purchases[product] = amount
+        
+        if amount == 0 {
             purchases.removeValue(forKey: product)
         }
     }
     
-    func find(product: String) -> Int? {
+    func find(_ product: String) -> Int? {
         return purchases[product]
+    }
+    
+    func totalQuantity() -> Int {
+        return purchases.values.reduce(0, +)
     }
 }

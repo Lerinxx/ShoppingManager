@@ -2,7 +2,7 @@ import UIKit
 
 final class ViewController: UIViewController {
     private let store = StoreRepository.getCurrentStore()
-    private let basket = Basket()
+    private lazy var basket = Basket(store: store)
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -41,6 +41,14 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         updateTotalLabel()
+        
+        // test retain cycle
+        var person: Person? = Person(name: "Bob")
+        var apartment: Apartment? = Apartment(number: 6)
+        person?.apartment = apartment
+        apartment?.tenant = person
+        person = nil
+        apartment = nil
     }
     
     private func configUI() {
@@ -92,10 +100,14 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         
         cell.onIncrease = { [weak self] in
             guard let self else { return }
-            self.basket.add(product: product)
-            let newQuantity = self.basket.find(product) ?? 0
-            cell.setQuantity(newQuantity, animated: true)
-            self.updateTotalLabel()
+            do {
+                try self.basket.add(product: product)
+                let newQuantity = self.basket.find(product) ?? 0
+                cell.setQuantity(newQuantity, animated: true)
+                self.updateTotalLabel()
+            } catch {
+                ErrorPresenter.present(error, in: self)
+            }
         }
         
         cell.onDecrease = { [weak self] in

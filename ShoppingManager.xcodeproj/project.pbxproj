@@ -34,6 +34,11 @@
 			path = Stack;
 			sourceTree = "<group>";
 		};
+		7950B7F22E0D4A65006D0FAC /* RetainCycle */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RetainCycle;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,7 @@
 		791B4CD62E001D62002BD2E3 = {
 			isa = PBXGroup;
 			children = (
+				7950B7F22E0D4A65006D0FAC /* RetainCycle */,
 				791B4D022E007A3E002BD2E3 /* Stack */,
 				791B4CE12E001D62002BD2E3 /* ShoppingManager */,
 				791B4CE02E001D62002BD2E3 /* Products */,
@@ -82,6 +88,7 @@
 			fileSystemSynchronizedGroups = (
 				791B4CE12E001D62002BD2E3 /* ShoppingManager */,
 				791B4D022E007A3E002BD2E3 /* Stack */,
+				7950B7F22E0D4A65006D0FAC /* RetainCycle */,
 			);
 			name = ShoppingManager;
 			packageProductDependencies = (
